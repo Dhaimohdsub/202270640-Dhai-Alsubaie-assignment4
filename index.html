@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dhai Alsubaie - Assignment 3 Portfolio" />
+  <title>Dhai Alsubaie | Assignment 3</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="top"></div>
+
+  <div id="welcomeOverlay" class="welcome-overlay">
+    <div class="welcome-overlay__content">
+      <h1 id="overlayTitle">Welcome ✨</h1>
+      <p id="overlayText">Loading your portfolio experience...</p>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top">Dhai Alsubaie</a>
+
+      <button class="menu-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+        Menu
+      </button>
+
+      <nav class="topnav" id="navMenu" aria-label="Primary">
+        <a href="#guide">Guide</a>
+        <a href="#projects">Projects</a>
+        <a href="#github">GitHub</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="topbar__actions">
+        <button class="btn btn--ghost" id="themeToggle" type="button" aria-pressed="false">
+          Toggle Theme
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout container">
+    <aside class="profile">
+      <div class="profile__card">
+        <div class="profile__media">
+          <img src="assets/images/profile.png" alt="Profile image" />
+          <div class="profile__badge" id="greeting">Hello!</div>
+        </div>
+
+        <div class="profile__body">
+          <h2 class="profile__name">Dhai Alsubaie</h2>
+          <p class="profile__role">Software Engineering Student</p>
+          <p class="profile__bio">
+            Building simple solutions to real problems — focused on web development, databases, and AI.
+          </p>
+
+          <div class="profile__links">
+            <a class="chip" href="mailto:dhaialsubaie@gmail.com">Email</a>
+            <a class="chip" href="#projects">Projects</a>
+            <a class="chip" href="#github">GitHub</a>
+            <a class="chip" href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="content">
+      <section class="hero">
+        <h1 class="hero__title">
+          ADVANCED <span class="ghost">FUNCTIONALITY</span>
+        </h1>
+
+        <p class="hero__subtitle">
+          This portfolio demonstrates advanced JavaScript logic, API integration, and user state management.
+        </p>
+
+        <div class="welcome-box card">
+          <h3>Personal Welcome</h3>
+          <p class="muted">Save your name and the site will remember you.</p>
+
+          <div class="welcome-controls">
+            <input type="text" id="visitorName" placeholder="Enter your name" />
+            <button class="btn" id="saveNameBtn" type="button">Save</button>
+            <button class="btn btn--ghost" id="clearNameBtn" type="button">Clear</button>
+          </div>
+
+          <p class="notice" id="welcomeMessage">Welcome, visitor!</p>
+          <p class="muted">Time on site: <span id="siteTimer">0</span> seconds</p>
+        </div>
+      </section>
+
+      <section class="block" id="guide">
+        <div class="block__head">
+          <h2 class="block__title">HOW TO <span class="ghost">USE THIS SITE</span></h2>
+          <p class="block__desc">Follow these steps to explore the portfolio clearly.</p>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Step 1</h3>
+            <p class="muted">Read the profile section to understand who I am and what I focus on.</p>
+          </div>
+
+          <div class="card">
+            <h3>Step 2</h3>
+            <p class="muted">Use the Projects section to filter, sort, and explore project details dynamically.</p>
+          </div>
+
+          <div class="card">
+            <h3>Step 3</h3>
+            <p class="muted">Open the GitHub Dashboard to load live repositories from the GitHub API.</p>
+          </div>
+
+          <div class="card">
+            <h3>Step 4</h3>
+            <p class="muted">Use the Contact form below and check the validation feedback messages.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="projects">
+        <div class="block__head">
+          <h2 class="block__title">PROJECT <span class="ghost">EXPLORER</span></h2>
+          <p class="block__desc">
+            Filter projects by category, sort them, and reveal more details.
+          </p>
+        </div>
+
+        <div class="controls card">
+          <div class="control-group">
+            <label for="filterCategory">Filter by category</label>
+            <select id="filterCategory">
+              <option value="all">All</option>
+              <option value="ai">AI</option>
+              <option value="database">Database</option>
+              <option value="web">Web</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label for="sortProjects">Sort projects</label>
+            <select id="sortProjects">
+              <option value="newest">Newest</option>
+              <option value="oldest">Oldest</option>
+              <option value="az">A–Z</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="projectList" class="project-list"></div>
+        <p id="projectsEmpty" class="notice hidden">No projects found for the selected options.</p>
+      </section>
+
+      <section class="block" id="github">
+        <div class="block__head">
+          <h2 class="block__title">GITHUB <span class="ghost">DASHBOARD</span></h2>
+          <p class="block__desc">
+            Load public repositories and see a live summary using the GitHub API.
+          </p>
+        </div>
+
+        <div class="card github-panel">
+          <div class="github-header">
+            <label for="githubUsername">GitHub username</label>
+            <div class="github-controls">
+              <input type="text" id="githubUsername" value="Dhaimohdsub" />
+              <button class="btn" id="loadReposBtn" type="button">Load Dashboard</button>
+            </div>
+          </div>
+
+          <p id="githubStatus" class="notice">Click "Load Dashboard" to fetch live GitHub data.</p>
+
+          <div class="dashboard-grid" id="githubSummary">
+            <div class="card summary-card">
+              <h3>Total Repositories</h3>
+              <p class="summary-number" id="repoCount">-</p>
+            </div>
+
+            <div class="card summary-card">
+              <h3>Top Language</h3>
+              <p class="summary-number" id="topLanguage">-</p>
+            </div>
+
+            <div class="card summary-card">
+              <h3>Latest Updated Repo</h3>
+              <p class="summary-number summary-text" id="latestRepo">-</p>
+            </div>
+          </div>
+
+          <div id="repoList" class="repo-list"></div>
+        </div>
+      </section>
+
+      <section class="block" id="contact">
+        <div class="block__head">
+          <h2 class="block__title">CONTACT <span class="ghost">FORM</span></h2>
+          <p class="block__desc">
+            Fill in the form below. Validation will guide you if any input is missing or invalid.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <form class="card form" id="contactForm" novalidate>
+            <label>
+              Name
+              <input type="text" name="name" id="name" autocomplete="name" required />
+              <span class="error" id="nameError"></span>
+            </label>
+
+            <label>
+              Email
+              <input type="email" name="email" id="email" autocomplete="email" required />
+              <span class="error" id="emailError"></span>
+            </label>
+
+            <label>
+              Message
+              <textarea name="message" id="message" rows="5" required></textarea>
+              <span class="error" id="messageError"></span>
+            </label>
+
+            <label class="checkbox-row">
+              <input type="checkbox" id="agreeCheck" />
+              <span>I confirm the information above is correct.</span>
+            </label>
+            <span class="error" id="agreeError"></span>
+
+            <p id="formNotice" class="notice" role="status" aria-live="polite"></p>
+
+            <button class="btn" type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>© <span id="year"></span> Dhai Alsubaie</p>
+        <a class="link" href="#top">Back to top</a>
+      </footer>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
