@@ -1,92 +1,155 @@
-# Assignment 3 — Advanced Functionality
+# Assignment 4 — Personal Web Application
 
-## Overview
-This project is an advanced version of my personal portfolio website built using HTML, CSS, and JavaScript. It extends the previous assignments by adding advanced functionality, API integration, user state management, and more complex interaction logic.
+## Project Overview
+This project is a complete and polished personal portfolio web application. It combines all the features developed in previous assignments into one final, professional website.
 
-The portfolio demonstrates not only visual design, but also advanced front-end programming concepts such as:
-- API integration
-- filtering and sorting logic
-- persistent user state
-- dynamic content updates
-- improved validation and feedback
+The goal of this project is to demonstrate my skills in front-end development, including building responsive layouts, creating interactive features, integrating APIs, managing state, and improving user experience.
+
+---
+
+## Live Application
+https://dhaimohdsub.github.io/202270640-Dhai-Alsubaie-assignment4/
+
+## Repository
+https://github.com/Dhaimohdsub/202270640-Dhai-Alsubaie-assignment4
+
+---
 
 ## Main Features
 
-### 1. Welcome Overlay
-A welcome screen appears when the website opens.  
-It displays a short introduction message and then disappears automatically.  
-If the visitor has saved a name before, the overlay changes to a personalized “Welcome back” message.
+### Welcome Overlay
+A welcome screen appears when the website loads and disappears automatically.  
+If the user has saved their name, a personalized message is shown.
 
-### 2. Personal Welcome Section
-The user can enter a name and save it.  
-The website remembers the name using `localStorage` and displays it again after refresh.  
-A timer also tracks how long the visitor has been on the website.
+---
 
-### 3. Project Explorer
-The Projects section is interactive.  
-Users can:
-- filter projects by category
-- sort projects by newest, oldest, or A–Z
-- expand and collapse project details
+### Visitor Personalization
+Users can enter and save their name using localStorage.  
+The website remembers the user and displays a personalized greeting.  
+It also shows a **last visit message** indicating when the user last opened the site.
 
-### 4. GitHub Dashboard
-The website integrates with the GitHub API to load public repositories dynamically.  
+---
+
+### Project Explorer
+The Projects section allows users to:
+- filter projects by category  
+- sort projects (newest, oldest, alphabetical)  
+- expand and collapse details  
+
+This feature demonstrates advanced JavaScript logic and dynamic content rendering.
+
+---
+
+### GitHub Dashboard (API Integration)
+The application connects to the GitHub API to fetch repository data.
+
 It displays:
-- total number of repositories
-- most used language
-- latest updated repository
-- repository cards with details
+- total repositories  
+- most used language  
+- latest updated repository  
+- repository cards  
 
-It also includes:
-- loading state
-- empty state
-- error message if the request fails
+It also handles loading and error states.
 
-### 5. Contact Form Validation
-The contact form checks:
-- name length
-- valid email format
-- minimum message length
-- checkbox confirmation
+---
 
-Error messages appear below the related fields, and a success message is shown when the form is completed correctly.
+### Contact Form Validation
+The contact form includes:
+- name validation  
+- email validation  
+- message validation  
+- checkbox confirmation  
 
-### 6. Theme Toggle
-The user can switch between dark and light theme.  
-The selected theme is saved in `localStorage`.
+It provides clear error messages and a success message.
 
-### 7. Responsive Navigation
-A responsive mobile menu is included for smaller screens.
+---
+
+### Theme Toggle
+Users can switch between dark and light mode.  
+The selected theme is saved and applied automatically.
+
+---
+
+### Time-Based Greeting
+Displays a greeting based on the time of day.
+
+---
+
+### Site Timer
+Shows how long the user has been browsing the website.
+
+---
+
+### Responsive Design
+The website is fully responsive and works on all screen sizes.
+
+---
+
+### User Guide Section
+Provides clear instructions to help users understand how to use the website.
+
+---
+
+## Innovation
+This project includes personalized interaction features such as:
+- saving user name  
+- remembering last visit  
+- dynamic GitHub data  
+
+These features make the application more interactive and user-friendly.
+
+---
 
 ## Technologies Used
-- HTML5
-- CSS3
-- JavaScript
-- GitHub REST API
-- localStorage
+- HTML5  
+- CSS3  
+- JavaScript  
+- GitHub API  
+- localStorage  
+- GitHub Pages  
 
-## How to Run the Project
-1. Clone or download the repository
-2. Open the project folder in VS Code
-3. Run `index.html` using Live Server  
-   or open it directly in the browser
+---
+
+## How to Run Locally
+1. Download or clone the repository  
+2. Open the folder in VS Code  
+3. Open `index.html` using Live Server  
+   or open it directly in a browser  
+
+---
+## Project Structure
+202270640-Dhai-Alsubaie-assignment4/
+├── README.md
+├── index.html
+├── styles.css
+├── js/
+│   └── script.js
+├── assets/
+│   └── images/
+├── docs/
+│   ├── ai-usage-report.md
+│   └── technical-documentation.md
+├── presentation/
+│   ├── slides.pdf
+│   └── demo-video.mp4
+└── .gitignore
+---
 
 ## AI Usage Summary
-AI was used to support:
-- planning advanced features
-- debugging JavaScript logic
-- improving UI/UX structure
-- refining responsive behavior
-- strengthening documentation
+AI tools were used as support for generating ideas, debugging, improving structure, and organizing documentation.  
+All suggestions were reviewed, modified, and tested before being used.
 
-More details are available in `docs/ai-usage-report.md`.
+More details are available in:
+`docs/ai-usage-report.md`
 
-## Live Demo
-Add your GitHub Pages link here.
+---
 
-## Repository
-Add your GitHub repository link here.
+## Documentation
+Technical details are available in:
+`docs/technical-documentation.md`
+
+---
 
 ## Student Information
-- Name: Dhai Alsubaie
-- Major: Software Engineering
+Name: Dhai Alsubaie  
+Major: Software Engineering
