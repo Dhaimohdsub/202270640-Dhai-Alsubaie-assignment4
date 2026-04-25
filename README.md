@@ -149,6 +149,8 @@ Technical details are available in:
 `docs/technical-documentation.md`
 
 ---
+## Demo Video
+https://drive.google.com/file/d/11F6M4Iw6uGg46VtimyXMH95p-9Dmacv5/view?usp=sharing
 
 ## Student Information
 Name: Dhai Alsubaie  
